@@ -27,6 +27,8 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.hibernate:hibernate-core:5.6.2.Final'
+	implementation group: 'org.springframework.data', name: 'spring-data-jdbc', version: '2.3.0'
 }
 
 test {
