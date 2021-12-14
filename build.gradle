@@ -3,6 +3,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'war'
+	id "com.microsoft.azure.azurewebapp" version "1.2.0"
 }
 
 group = 'com.mhsong'
@@ -33,4 +34,20 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+}
+
+azurewebapp {
+	subscription = '2fe0bbea-dbd2-47aa-90bd-a3d91e56d3fc'
+	resourceGroup = 'WEBAPP-TEST-RG'
+	appName = 'zenith-webapp-test'
+	pricingTier = 'P1v2'
+	region = 'koreacentral'
+	runtime {
+		os = 'Linux'
+		webContainer = 'Tomcat 8.5'
+		javaVersion = 'Java 8'
+	}
+	auth {
+		type = 'device_code'
+	}
 }
