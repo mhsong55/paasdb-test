@@ -9,7 +9,7 @@ plugins {
 group = 'com.mhsong'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
-
+apply plugin: 'war'
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
@@ -19,12 +19,13 @@ configurations {
 repositories {
 	mavenCentral()
 }
-
+bootWar.enabled = false
+war.enabled = true
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'org.postgresql:postgresql'
+	runtimeOnly 'org.postgresql:postgresql:42.3.1'
 	annotationProcessor 'org.projectlombok:lombok'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -35,7 +36,7 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
-
+/*
 azurewebapp {
 	subscription = '2fe0bbea-dbd2-47aa-90bd-a3d91e56d3fc'
 	resourceGroup = 'WEBAPP-TEST-RG'
@@ -51,3 +52,4 @@ azurewebapp {
 		type = 'device_code'
 	}
 }
+*/
