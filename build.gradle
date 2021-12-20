@@ -39,6 +39,10 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
+war {
+	archiveName("ext-tomcat-war-test.war")
+}
 /*
 azurewebapp {
 	subscription = '2fe0bbea-dbd2-47aa-90bd-a3d91e56d3fc'
