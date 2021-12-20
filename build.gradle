@@ -10,7 +10,10 @@ group = 'com.mhsong'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 apply plugin: 'war'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 77be04b410cae12be36d53fee30cc2337f06c4f4
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
@@ -20,15 +23,20 @@ configurations {
 repositories {
 	mavenCentral()
 }
+<<<<<<< HEAD
 
 bootWar.enabled = false
 war.enabled = true
 
+=======
+bootWar.enabled = false
+war.enabled = true
+>>>>>>> 77be04b410cae12be36d53fee30cc2337f06c4f4
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'org.postgresql:postgresql'
+	runtimeOnly 'org.postgresql:postgresql:42.3.1'
 	annotationProcessor 'org.projectlombok:lombok'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
